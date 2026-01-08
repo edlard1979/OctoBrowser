@@ -23,7 +23,7 @@ jobs:
     - name: Build Release
       run: |
         mkdir bin\Release\
-        msbuild OctopusBrowser.csproj /p:Configuration=Release /p:Platform="Any CPU" /p:OutputPath="bin\Release\"
+        msbuild OctopusBrowser.csproj /p:Configuration=Release /p:Platform="Any CPU" /p:OutputPath="bin\Release\" /p:NoWin32Manifest=true
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
